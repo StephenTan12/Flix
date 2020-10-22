@@ -175,29 +175,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-gE-wbv">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-gE-wbv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EWR-RC-oj1">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EWR-RC-oj1">
+                                    <size key="itemSize" width="201" height="301"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="22h-VE-Kip" customClass="MovieGridCell" customModule="Flix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="201" height="301"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BKY-a8-Csz">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="201" height="301"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4d-Vk-YSt">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4d-Vk-YSt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="708"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="x4d-Vk-YSt" firstAttribute="top" secondItem="BKY-a8-Csz" secondAttribute="top" id="0iB-my-C2o"/>
+                                                <constraint firstAttribute="trailing" secondItem="x4d-Vk-YSt" secondAttribute="trailing" id="7fo-t3-3og"/>
+                                                <constraint firstAttribute="bottom" secondItem="x4d-Vk-YSt" secondAttribute="bottom" id="96S-Fd-hsv"/>
+                                                <constraint firstItem="x4d-Vk-YSt" firstAttribute="leading" secondItem="BKY-a8-Csz" secondAttribute="leading" id="BOl-Fx-U1E"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="posterView" destination="x4d-Vk-YSt" id="2eB-gQ-iOv"/>
@@ -207,6 +211,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4m2-gE-wbv" firstAttribute="top" secondItem="UPZ-86-Tha" secondAttribute="top" id="PgS-gf-xM6"/>
+                            <constraint firstItem="4m2-gE-wbv" firstAttribute="trailing" secondItem="YII-D2-sgF" secondAttribute="trailing" id="VoJ-Jc-Mmq"/>
+                            <constraint firstItem="4m2-gE-wbv" firstAttribute="leading" secondItem="YII-D2-sgF" secondAttribute="leading" id="bG3-D7-5LQ"/>
+                            <constraint firstAttribute="bottom" secondItem="4m2-gE-wbv" secondAttribute="bottom" id="jOg-5d-lCg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YII-D2-sgF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Superhero" id="MjZ-7C-xpS"/>
