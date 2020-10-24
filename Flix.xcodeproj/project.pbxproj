@@ -23,6 +23,8 @@
 		E4DD801725422DE80051CDE4 /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD801625422DE80051CDE4 /* MovieGridViewController.swift */; };
 		E4DD80192542310D0051CDE4 /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD80182542310D0051CDE4 /* MovieGridCell.swift */; };
 		E4DD801B25423B2E0051CDE4 /* MovieGridDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD801A25423B2E0051CDE4 /* MovieGridDetailsViewController.swift */; };
+		E4DD801D2542402B0051CDE4 /* MovieTrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD801C2542402B0051CDE4 /* MovieTrailerViewController.swift */; };
+		E4DD805D2543B8DF0051CDE4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DD805C2543B8DF0051CDE4 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		E4DD801625422DE80051CDE4 /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
 		E4DD80182542310D0051CDE4 /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
 		E4DD801A25423B2E0051CDE4 /* MovieGridDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridDetailsViewController.swift; sourceTree = "<group>"; };
+		E4DD801C2542402B0051CDE4 /* MovieTrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailerViewController.swift; sourceTree = "<group>"; };
+		E4DD805C2543B8DF0051CDE4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DD805D2543B8DF0051CDE4 /* WebKit.framework in Frameworks */,
 				5B8BD3DA84B9E1C4823BF521 /* Pods_Flix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +122,7 @@
 		2B77FCE21377D9546DC2C1B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4DD805C2543B8DF0051CDE4 /* WebKit.framework */,
 				4561FECA41B818E9784C7715 /* Pods_Flix.framework */,
 				CA3DAB9AC8CFC0E23D31F983 /* Pods_Flix_FlixUITests.framework */,
 				AD85AB650F2F2A14C9AECE4E /* Pods_FlixTests.framework */,
@@ -193,6 +199,7 @@
 				E4DD801A25423B2E0051CDE4 /* MovieGridDetailsViewController.swift */,
 				E4BFE68D25379BBB00630374 /* MoviesViewController.swift */,
 				E4DD801625422DE80051CDE4 /* MovieGridViewController.swift */,
+				E4DD801C2542402B0051CDE4 /* MovieTrailerViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -454,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DD801D2542402B0051CDE4 /* MovieTrailerViewController.swift in Sources */,
 				E4DD8015254220B70051CDE4 /* MovieDetailsViewController.swift in Sources */,
 				E4497CEB25353D6C003C353A /* AppDelegate.swift in Sources */,
 				E4DD801B25423B2E0051CDE4 /* MovieGridDetailsViewController.swift in Sources */,

@@ -14,12 +14,12 @@ class MovieGridDetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var backdropView: UIImageView!
-    
     var movie: [String: Any]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        backdropView.isUserInteractionEnabled = true
         // Do any additional setup after loading the view.
         titleLabel.text = movie["title"] as? String
         synopsisLabel.text = movie["overview"] as? String
@@ -36,15 +36,13 @@ class MovieGridDetailsViewController: UIViewController {
         backdropView.af.setImage(withURL: backdropUrl!)
     }
     
-
-    /*
-    // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let url = "https://api.themoviedb.org/3/movie/\(movie["id"]!)/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"
+        let trailerViewController = segue.destination as! MovieTrailerViewController
+        trailerViewController.trailerURL = url
     }
-    */
 
 }

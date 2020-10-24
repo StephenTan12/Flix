@@ -239,9 +239,14 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJZ-Gu-LDc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="371.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nJl-UB-9Kl" appends="YES" id="w0s-RZ-myJ"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ewY-3m-9tQ">
                                 <rect key="frame" x="20" y="260" width="153" height="218"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="218" id="A2i-mr-eKD"/>
                                     <constraint firstAttribute="width" constant="153" id="Ax2-sJ-6eh"/>
@@ -286,8 +291,49 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pki-JI-aAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nJl-UB-9Kl">
+                    <connections>
+                        <outlet property="delegate" destination="tJZ-Gu-LDc" id="vl0-e5-IbY"/>
+                        <segue destination="ucA-Bz-jKc" kind="presentation" id="1uU-hc-7fT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="440.57971014492756" y="1174.5535714285713"/>
+        </scene>
+        <!--Movie Trailer View Controller-->
+        <scene sceneID="gUa-hC-MTh">
+            <objects>
+                <viewController id="ucA-Bz-jKc" customClass="MovieTrailerViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BBF-qQ-ayx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ik-TB-c2X">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8ik-TB-c2X" firstAttribute="top" secondItem="BBF-qQ-ayx" secondAttribute="top" id="BZJ-pO-EZe"/>
+                            <constraint firstItem="8ik-TB-c2X" firstAttribute="trailing" secondItem="clW-Jv-3g9" secondAttribute="trailing" id="QyQ-Nm-aHc"/>
+                            <constraint firstItem="8ik-TB-c2X" firstAttribute="leading" secondItem="clW-Jv-3g9" secondAttribute="leading" id="WOB-Wf-Mkd"/>
+                            <constraint firstAttribute="bottom" secondItem="8ik-TB-c2X" secondAttribute="bottom" id="aGq-zW-ZQO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="clW-Jv-3g9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N1E-3O-RK9"/>
+                    <connections>
+                        <outlet property="trailerView" destination="8ik-TB-c2X" id="7vr-3C-1ml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFk-vE-nFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.68115942028987" y="1865.625"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="4N2-xe-e8N">
